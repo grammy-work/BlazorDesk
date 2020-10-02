@@ -23,7 +23,7 @@ Set BlazorDesk.WebServer as startup project, and run it.
 
 ## Use it in your own project
 
-Full text find & replace keyword BlazorDesk into your own and rebuild, should work.
+Full text find & replace keyword BlazorDesk into your own project name and rebuild it, should work.
 
 ## Copyrights
 
