@@ -9,10 +9,10 @@ And I like Blazor which is potentially able to beat VUE which I don't have time 
 And I like the way how classical UserControls on windows work.
 
 How:
-I wanted to fork from Blazorized by Sjef van Leeuwen （https://github.com/sjefvanleeuwen/blazor-adminlte）,
+I wanted to fork from Blazorized by Sjef van Leeuwen ( https://github.com/sjefvanleeuwen/blazor-adminlte ),
 but I hope it simpler.
 Then I migrate the code from it and reorganized this project.
 
 Special Thanks:
-Sjef van Leeuwen @sjefvanleeuwen
+Original creator Sjef van Leeuwen [@sjefvanleeuwen](https://github.com/sjefvanleeuwen)
 
