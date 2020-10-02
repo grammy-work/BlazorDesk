@@ -1,0 +1,20 @@
+﻿@namespace BlazorDesk.Components
+<div class="info-box bg-@DisplayBackgroundColor">
+    <span class="info-box-icon bg-@DisplayIconBackgroundColor"><i class="@Icon"></i></span>
+    <div class="info-box-content">
+        <span class="info-box-text">@Title</span>
+        <span class="info-box-number">@Value</span>
+        @if (DisplayBackgroundColor != "" && Percentage != null)
+        {
+            <div class="progress">
+                <div class="progress-bar" style="width: @(Percentage)%"></div>
+            </div>
+            if (ProgressDescription != null)
+            {
+            <span class="progress-description">
+                @ProgressDescription
+            </span>
+            }
+        }
+    </div>
+</div>

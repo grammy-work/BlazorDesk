@@ -1,0 +1,43 @@
+﻿@namespace BlazorDesk.Components
+@implements IDisposable
+@inject NavigationManager Nav
+<li class="nav-item">
+    <a href="@Link" class="nav-link @navLinkState">
+        <i class="nav-icon @Icon"></i>
+        <p>
+            @ChildContent
+        </p>
+    </a>
+</li>
+@code {
+    [Parameter]
+    public string Icon { get; set; }
+    [Parameter]
+    public string Link { get; set; } = "javascript:void(0)";
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public NavLinkState NavLinkState { get; set; }
+
+    private string navLinkState { get; set; }
+
+    private void LocationChanged(object sender, LocationChangedEventArgs args)
+    {
+        if (Link.StartsWith("javascript"))
+            return;
+        NavLinkState = new Uri(Nav.Uri).PathAndQuery.Trim('/') == Link.Trim('/') ? NavLinkState.Active : NavLinkState.Inactive;
+        navLinkState = NavLinkState.GetDescription<StyleAttribute>();
+        StateHasChanged();
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        Nav.LocationChanged += LocationChanged;
+        return base.OnInitializedAsync();
+    }
+
+    void IDisposable.Dispose()
+    {
+        Nav.LocationChanged -= LocationChanged;
+    }
+}

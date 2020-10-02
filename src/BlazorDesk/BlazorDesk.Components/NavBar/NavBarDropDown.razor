@@ -1,0 +1,13 @@
+﻿@namespace BlazorDesk.Components
+@inject Microsoft.JSInterop.IJSRuntime js
+<li id="id" class="nav-item dropdown">
+    @ChildContent
+</li>
+@code {
+    private string id = Guid.NewGuid().ToString();
+
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+}

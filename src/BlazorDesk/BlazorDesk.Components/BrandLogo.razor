@@ -1,0 +1,22 @@
+﻿@namespace BlazorDesk.Components
+<!-- Brand Logo -->
+<a href="@Link" class="brand-link">
+    <img src="@Logo" alt="Logo" class="brand-image @imageEffect @elevation">
+    <span class="brand-text font-weight-light">@ChildContent</span>
+</a>
+@code {
+    [Parameter]
+    public string Link { get; set; } = "#";
+    [Parameter]
+    public string Logo { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public Elevation Elevation { get; set; }
+    [Parameter]
+    public ImageEffect ImageEffect { get; set; }
+
+    private string elevation => Elevation.GetDescription<StyleAttribute>();
+    private string imageEffect => ImageEffect.GetDescription<StyleAttribute>();
+}

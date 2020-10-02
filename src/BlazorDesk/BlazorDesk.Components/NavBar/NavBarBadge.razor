@@ -1,0 +1,30 @@
+﻿@namespace BlazorDesk.Components
+@inject Microsoft.JSInterop.IJSRuntime js
+<a @ref="reference" class="nav-link" href="#" @onclick="Toggle" @onfocusout="Hide" @onfocusout:preventDefault @onclick:preventDefault>
+    <i class="@Icon"></i>
+    <span class="badge badge-@color navbar-badge">@ChildContent</span>
+</a>
+@code {
+    private ElementReference reference;
+    [Parameter]
+    public string Icon { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public Color Color { get; set; }
+    //data-toggle="dropdown"
+    private string color => Color.GetDescription<StyleAttribute>();
+
+    private async Task Toggle(object e)
+    {
+        await js.InvokeAsync<string>("toggleMenu", reference);
+        StateHasChanged();
+    }
+
+    private async Task Hide()
+    {
+        await Task.Delay(150);
+        await js.InvokeAsync<string>("hideMenu", reference);
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,24 @@
+﻿@namespace BlazorDesk.Components
+<!-- Sidebar user panel (optional) -->
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        <img src="@UserImage" class="@imageEffect @elevation" alt="User Image">
+    </div>
+    <div class="info">
+        <a href="#" class="d-block">@ChildContent</a>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public string UserImage { get; set; }
+
+    [Parameter]
+    public Elevation Elevation { get; set; }
+    [Parameter]
+    public ImageEffect ImageEffect { get; set; }
+
+    private string elevation => Elevation.GetDescription<StyleAttribute>();
+    private string imageEffect => ImageEffect.GetDescription<StyleAttribute>();
+}

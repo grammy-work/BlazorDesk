@@ -1,0 +1,4 @@
+﻿@namespace BlazorDesk.Components
+    <li class="nav-item">
+        <a class="nav-link @(IsActive ? "active" : string.Empty)" id="@(CompositeIdentifier)-tab" data-toggle="pill" href="#@(CompositeIdentifier)" role="tab" aria-controls="@CompositeIdentifier" aria-selected="@IsActive" @onclick="OnClick">@ChildContent</a>
+    </li>

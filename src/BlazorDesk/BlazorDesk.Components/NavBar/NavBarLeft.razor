@@ -1,0 +1,33 @@
+﻿@namespace BlazorDesk.Components
+@inject IJSRuntime JS
+@inject NavigationManager nav
+@inject NavBarLeftInjectableMenu menu
+<!-- Left navbar links -->
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a @ref="pushButton" class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
+    @ChildContent
+</ul>
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    ElementReference pushButton { get; set; }
+
+    int x = 0;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // initiates the data-widget from blazor, preserves the virtual dom.
+            JS.InvokeVoidAsync("click", pushButton);
+        }
+        // Hack for WASM.
+        x++;
+        if (x==1) StateHasChanged();
+        if (x == 2)
+            x = 0;
+    }
+}

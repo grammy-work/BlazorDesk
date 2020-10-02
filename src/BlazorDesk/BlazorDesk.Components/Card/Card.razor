@@ -1,0 +1,29 @@
+﻿@namespace BlazorDesk.Components
+<div @ref="CardReference" @attributes="@Attributes">
+    <div @attributes="HeaderAttributes">
+        @Title
+        <CascadingValue Name="ToolOptions" Value="ToolOptions">
+            @Header
+        </CascadingValue>
+    </div>
+    <div class="card-body">
+         @Body
+    </div>
+    @if (Footer != null)
+    {
+    <div class="card-footer">
+        @Footer
+    </div>
+    }
+    @if (LoadingState != LoadingState.None)
+    {
+        <div class="@(LoadingState.GetDescription<StyleAttribute>())">
+            <i class="fas fa-2x fa-sync-alt"></i>
+        </div>
+    }
+</div>
+
+@code {
+
+
+}

@@ -1,0 +1,6 @@
+﻿@namespace BlazorDesk.Components
+<div class="tab-content" id="@(Identifier)Content">
+    <CascadingValue Name="ParentIdentifier" Value="@Identifier">
+        @ChildContent
+    </CascadingValue>
+</div>

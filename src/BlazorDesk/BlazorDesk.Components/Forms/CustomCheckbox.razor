@@ -1,0 +1,6 @@
+﻿@namespace BlazorDesk.Components
+<div class="custom-control custom-checkbox">
+    <input class="custom-control-input" type="checkbox" id="@Value.Identifier" value="@Value.Value" disabled="@Value.IsDisabled" checked="@Value.IsChecked" @onchange="DoChange">
+    <label for="@Value.Identifier" class="custom-control-label">@((MarkupString)Value.Label)</label>
+</div>
+
