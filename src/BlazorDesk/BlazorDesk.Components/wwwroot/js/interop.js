@@ -55,3 +55,12 @@ function dateRangePicker(dotnetRef, el, range, locale, settings) {
 function setTitle(title) {
     document.title = title;
 }
+
+function setHeaderCssLink(value) {
+    var element = document.createElement("link");
+    element.setAttribute("rel", "stylesheet");
+    element.setAttribute("type", "text/css");
+    //element.setAttribute("href", "css/external.css");//location of the css that we want     include for the page
+    element.setAttribute("href", value);
+    document.getElementsByTagName("head")[0].appendChild(element);
+}

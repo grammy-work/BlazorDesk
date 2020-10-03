@@ -71,10 +71,10 @@
 	</NavBarRight>
 </NavBar>
 <SideBarContainer>
-	<BrandLogo Link="https://adminlte.io/" Logo="_content/BlazorDesk.Components/dist/img/AdminLTELogo.png">AdminLTE 3</BrandLogo>
+	<BrandLogo Link="" Logo="_content/BlazorDesk.Components/dist/img/BlazorDeskLogo.png">BlazorDesk 2020</BrandLogo>
 	<SideBar>
 		<!-- Sidebar user panel (optional) -->
-		<SideBarUserPanel ImageEffect="ImageEffect.Circle" Elevation="Elevation.Three" UserImage="_content/BlazorDesk.Components/dist/img/user2-160x160.jpg">Alexander Pierce</SideBarUserPanel>
+		<SideBarUserPanel ImageEffect="ImageEffect.Circle" Elevation="Elevation.Three" UserImage="_content/BlazorDesk.Components/dist/img/user0-160x160.jpg">Grammy Leung</SideBarUserPanel>
 		@*<SideBarSearch></SideBarSearch>*@
 		<SideBarMenu>
 			<SideBarMenuItem Link="widgets" Icon="fas fa-th">
@@ -83,7 +83,7 @@
 			<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-copy">
 				<Title>Layout Options</Title>
 				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="layout/grid-system">
+					<SideBarMenuItem Icon="far fa-circle" Link="index1">
 						Grid System
 					</SideBarMenuItem>
 				</Items>
@@ -148,10 +148,10 @@
 <ControlSideBar>Hello World!</ControlSideBar>
 <MainFooter>
 	<Default>
-		<strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+		<strong>Copyright &copy; @DateTime.Now.Year BlazorDesk.</strong> All rights reserved.
 	</Default>
 	<Right>
-		Blazorized by Sjef van Leeuwen
+		Maintained by BlazorDesk
 	</Right>
 </MainFooter>
 @code {
