@@ -29,3 +29,6 @@ should work.
 ## Copyrights
 
 As you like!
+
+## Notes
+* I hope I can but I can't make everything done before I have to start my other money making project. Now a structure of the whole site was built, though dashboards are still on the way. My template allows different css and js files can be added into different pages. (2020-10-07)
