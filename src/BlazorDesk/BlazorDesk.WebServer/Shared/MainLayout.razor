@@ -76,70 +76,84 @@
 		<!-- Sidebar user panel (optional) -->
 		<SideBarUserPanel ImageEffect="ImageEffect.Circle" Elevation="Elevation.Three" UserImage="_content/BlazorDesk.Components/dist/img/user0-160x160.jpg">Grammy Leung</SideBarUserPanel>
 		@*<SideBarSearch></SideBarSearch>*@
-		<SideBarMenu>
-			<SideBarMenuItem Link="widgets" Icon="fas fa-th">
-				Widgets
-			</SideBarMenuItem>
-			<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-copy">
-				<Title>Layout Options</Title>
-				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="index1">
-						Grid System
-					</SideBarMenuItem>
-				</Items>
-			</SideBarTreeView>
-			<SideBarTreeView MenuState="MenuState.Open" Icon="fas fa-tachometer-alt">
-				<Title>Starter Pages</Title>
-				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="starter-pages/active-page">
-						Active Page
-					</SideBarMenuItem>
-					<SideBarMenuItem Icon="far fa-circle">
-						Inactive Page
-					</SideBarMenuItem>
-				</Items>
-			</SideBarTreeView>
-			<SideBarTreeView MenuState="MenuState.Open" Icon="fas fa-tachometer-alt">
-				<Title>Content Injections</Title>
-				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="injections/navbar-left">
-						NavBar Left
-					</SideBarMenuItem>
-					<SideBarMenuItem Icon="far fa-circle" Link="injections/navbar-left-override">
-						NavBar Left Override
-					</SideBarMenuItem>
-				</Items>
-			</SideBarTreeView>
-			<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-tree">
-				<Title>UI Elements</Title>
-				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="ui/general">
-						General
-					</SideBarMenuItem>
-					<SideBarMenuItem Icon="far fa-circle" Link="ui/buttons">
-						Buttons
-					</SideBarMenuItem>
-					<SideBarMenuItem Link="ui/navbar" Icon="far fa-circle">
-						Navbar & Tabs
-					</SideBarMenuItem>
-				</Items>
-			</SideBarTreeView>
-			<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-edit">
-				<Title>Forms</Title>
-				<Items>
-					<SideBarMenuItem Icon="far fa-circle" Link="forms/general">
-						General Elements
-					</SideBarMenuItem>
-					<SideBarMenuItem Icon="far fa-circle" Link="forms/advanced">
-						Advanced Elements
-					</SideBarMenuItem>
-				</Items>
-			</SideBarTreeView>
-			<SideBarMenuItem Link="simple-link" Icon="fas fa-th">
-				Simple Link
-				<span class="right badge badge-danger">New</span>
-			</SideBarMenuItem>
-		</SideBarMenu>
+	<SideBarMenu>
+		<SideBarTreeView MenuState="MenuState.Open" Icon="fas fa-tachometer-alt">
+			<Title>Dashboard</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="Dashboard/Dashboard1">
+					Dashboard v1
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle" Link="Dashboard/Dashboard2">
+					Dashboard v2
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle" Link="Dashboard/Dashboard3">
+					Dashboard v3
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarMenuItem Link="widgets" Icon="fas fa-th">
+			Widgets
+		</SideBarMenuItem>
+		<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-copy">
+			<Title>Layout Options</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="index1">
+					Grid System
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarTreeView MenuState="MenuState.Open" Icon="fas fa-tachometer-alt">
+			<Title>Starter Pages</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="starter-pages/active-page">
+					Active Page
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle">
+					Inactive Page
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarTreeView MenuState="MenuState.Open" Icon="fas fa-tachometer-alt">
+			<Title>Content Injections</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="injections/navbar-left">
+					NavBar Left
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle" Link="injections/navbar-left-override">
+					NavBar Left Override
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-tree">
+			<Title>UI Elements</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="ui/general">
+					General
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle" Link="ui/buttons">
+					Buttons
+				</SideBarMenuItem>
+				<SideBarMenuItem Link="ui/navbar" Icon="far fa-circle">
+					Navbar & Tabs
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarTreeView MenuState="MenuState.Closed" Icon="fas fa-edit">
+			<Title>Forms</Title>
+			<Items>
+				<SideBarMenuItem Icon="far fa-circle" Link="forms/general">
+					General Elements
+				</SideBarMenuItem>
+				<SideBarMenuItem Icon="far fa-circle" Link="forms/advanced">
+					Advanced Elements
+				</SideBarMenuItem>
+			</Items>
+		</SideBarTreeView>
+		<SideBarMenuItem Link="simple-link" Icon="fas fa-th">
+			Simple Link
+			<span class="right badge badge-danger">New</span>
+		</SideBarMenuItem>
+	</SideBarMenu>
 	</SideBar>
 </SideBarContainer>
 <ContentWrapper>

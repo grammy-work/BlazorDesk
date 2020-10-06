@@ -1,0 +1,16 @@
+﻿@namespace BlazorDesk.Components
+@inject IJSRuntime JS
+@code {
+	[Parameter]
+	public string Value { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await setHeaderCssLink();
+	}
+
+	private async Task setHeaderCssLink()
+	{
+		await JS.InvokeVoidAsync("setHeaderCssLink", Value);
+	}
+}

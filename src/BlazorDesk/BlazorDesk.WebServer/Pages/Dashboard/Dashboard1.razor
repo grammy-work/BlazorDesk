@@ -1,0 +1,65 @@
+﻿@page "/Dashboard/Dashboard1"
+<PageHeader>
+	<PageHeaderCssLink Value="_content/BlazorDesk.Components/plugins/flag-icon-css/css/flag-icon.css" />
+	<PageHeaderTitle Title="Dashboard v1 - BlazorDesk" />
+</PageHeader>
+<ContentHeader>
+	<Header>Dashboard 1</Header>
+	<Breadcrum>
+		<ContentHeaderBreadcrum PageName="Dashboard v1" PathName="Dashboard" />
+	</Breadcrum>
+</ContentHeader>
+<ContentMain>
+	<Container Type="ContainerType.Fluid">
+		<Row>
+			<Column Classes="col.md._3">
+				<SmallBox Icon="fas fa-shopping-cart" BackgroundColor="Color.Info">
+					<Value>150</Value>
+					<Title>New Orders</Title>
+					<Footer><SmallBoxFooter></SmallBoxFooter></Footer>
+				</SmallBox>
+			</Column>
+			<Column Classes="col.md._3">
+				<SmallBox Icon="fas fa-percentage" BackgroundColor="Color.Success">
+					<Value>53<sup style="font-size: 20px">%</sup></Value>
+					<Title>Bounce Rate</Title>
+					<Footer><SmallBoxFooter></SmallBoxFooter></Footer>
+				</SmallBox>
+			</Column>
+			<Column Classes="col.md._3">
+				<SmallBox Icon="fas fa-user-plus" BackgroundColor="Color.Warning">
+					<Value>44</Value>
+					<Title>User Registrations</Title>
+					<Footer><SmallBoxFooter></SmallBoxFooter></Footer>
+				</SmallBox>
+			</Column>
+			<Column Classes="col.md._3">
+				<SmallBox Icon="fas fa-chart-pie" BackgroundColor="Color.Danger">
+					<Value>65</Value>
+					<Title>Unique Visitors</Title>
+					<Footer><SmallBoxFooter></SmallBoxFooter></Footer>
+				</SmallBox>
+			</Column>
+		</Row>
+		<Row>
+			<Column Classes="col.lg._7">
+				<Card ToolOptions="new CardToolOptions { Maximizable = true }">
+					<Header>
+						<CardTitle><i class="fas fa-chart-pie mr-1"></i> Sales</CardTitle>
+						<CardTools></CardTools>
+					</Header>
+					<Body>
+
+					</Body>
+				</Card>
+			</Column>
+			<Column Classes="col.lg._5">
+				<Card Styles="new CardStyle[] { CardStyle.Outline }" HeaderBackgroundColor="Color.Primary">
+					<Header><CardTitle> <i class="fas fa-edit"></i> Outline Buttons</CardTitle></Header>
+					<Body>
+					</Body>
+				</Card>
+			</Column>
+		</Row>
+	</Container>
+</ContentMain>

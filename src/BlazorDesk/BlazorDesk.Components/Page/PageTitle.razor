@@ -1,0 +1,12 @@
+﻿@namespace BlazorDesk.Components
+@inject IJSRuntime JS
+@if (!Hidden)
+{
+	@Title
+}
+@code {
+	[Parameter]
+	public string Title { get; set; }
+	[Parameter]
+	public bool Hidden { get; set; } = false;
+}

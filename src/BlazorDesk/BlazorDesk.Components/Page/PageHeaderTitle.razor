@@ -1,0 +1,16 @@
+﻿@namespace BlazorDesk.Components
+@inject IJSRuntime JS
+@code {
+	[Parameter]
+	public string Title { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await setTitle();
+	}
+
+	private async Task setTitle()
+	{
+		await JS.InvokeVoidAsync("setTitle", Title);
+	}
+}

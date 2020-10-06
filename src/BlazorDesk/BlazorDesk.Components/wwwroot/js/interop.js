@@ -56,6 +56,10 @@ function setTitle(title) {
     document.title = title;
 }
 
+function setHeaderTitle(title) {
+    document.title = title;
+}
+
 function setHeaderCssLink(value) {
     var element = document.createElement("link");
     element.setAttribute("rel", "stylesheet");

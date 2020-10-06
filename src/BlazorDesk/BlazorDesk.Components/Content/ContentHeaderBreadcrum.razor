@@ -1,0 +1,27 @@
+﻿@namespace BlazorDesk.Components
+<ol class="breadcrumb float-sm-right">
+	<li class="breadcrumb-item"><a href="/">Home</a></li>
+	@if (!string.IsNullOrEmpty(PathName))
+	{
+		<li class="breadcrumb-item">
+			@if (!string.IsNullOrEmpty(PathHref))
+			{
+				<a href="@PathHref">@PathName</a>
+			}
+			else
+			{
+				<span class="breadcrumb-item active">@PathName</span>
+			}
+		</li>
+	}
+	<li class="breadcrumb-item active">@PageName</li>
+</ol>
+
+@code {
+	[Parameter]
+	public string PathName { get; set; }
+	[Parameter]
+	public string PathHref { get; set; }
+	[Parameter]
+	public string PageName { get; set; }
+}

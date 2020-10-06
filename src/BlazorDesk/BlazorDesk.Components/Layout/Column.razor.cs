@@ -29,6 +29,9 @@ namespace BlazorDesk.Components
         public static FluentColumn w50 { get { return new FluentColumn("w-50", ""); } }
         public static FluentColumn w75 { get { return new FluentColumn("w-75", ""); } }
         public static FluentColumn w100 { get { return new FluentColumn("w-100", ""); } }
+
+        //public static FluentColumn connectedSortable { get { return new FluentColumn(" .connectedSortable", ""); } }
+
     }
 
     public partial class Column
@@ -100,5 +103,7 @@ namespace BlazorDesk.Components
         public FluentColumn _12 { get { _class.Append("-12"); return new FluentColumn(this); } }
         public FluentColumn auto { get { _class.Append("-auto"); return new FluentColumn(this); } }
         public FluentColumn col { get { _class.Append(" col"); return new FluentColumn(this); } }
+
+        //public FluentColumn connectedSortable { get { _class.Append(" .connectedSortable"); return new FluentColumn(this); } }
     }
 }
