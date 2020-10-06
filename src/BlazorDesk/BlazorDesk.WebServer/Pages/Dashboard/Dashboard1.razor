@@ -49,17 +49,25 @@
 						<CardTools></CardTools>
 					</Header>
 					<Body>
-
+						
 					</Body>
 				</Card>
 			</Column>
 			<Column Classes="col.lg._5">
-				<Card Styles="new CardStyle[] { CardStyle.Outline }" HeaderBackgroundColor="Color.Primary">
-					<Header><CardTitle> <i class="fas fa-edit"></i> Outline Buttons</CardTitle></Header>
+				<Card ToolOptions="new CardToolOptions { Maximizable = true }">
+					<Header>
+						<CardTitle><i class="fas fa-chart-pie mr-1"></i> Sales</CardTitle>
+						<CardTools></CardTools>
+					</Header>
 					<Body>
+
 					</Body>
 				</Card>
 			</Column>
 		</Row>
 	</Container>
 </ContentMain>
+<PageFooter>
+	<PageFooterScript Source="_content/BlazorDesk.Components/plugins/chart.js/Chart.min.js"></PageFooterScript>
+	<PageFooterScript Source="js/dashboard1.js"></PageFooterScript>
+</PageFooter>

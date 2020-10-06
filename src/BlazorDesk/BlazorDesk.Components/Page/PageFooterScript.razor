@@ -1,0 +1,25 @@
+﻿@namespace BlazorDesk.Components
+@inject IJSRuntime JS
+@code {
+	[Parameter]
+	public string Source { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (!string.IsNullOrEmpty(Source))
+			await SetScriptWithSource();
+		//else
+		//	await SetScriptWithCode(code);
+	}
+
+	private async Task SetScriptWithCode(string code)
+	{
+		await JS.InvokeVoidAsync("setScriptWithCode", code);
+	}
+
+	private async Task SetScriptWithSource()
+	{
+		await JS.InvokeVoidAsync("setScriptWithSource", Source);
+	}
+
+}
